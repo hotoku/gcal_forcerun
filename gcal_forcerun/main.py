@@ -99,6 +99,7 @@ class Zoom(Event):
         location = self.event.get("location", "")
         if location.find("zoom.us") > -1:
             return location
+        # todo: 前者会議の会議で、ミスっているので、判定ロジックを変える
         description = self.event.get("description", "")
         reg_url = re.compile(r"(https://zoom.us/.*)\r\n")
         _m = reg_url.search(description)
