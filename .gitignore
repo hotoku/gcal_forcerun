@@ -1,3 +1,5 @@
 .idea
 poetry.lock
 .python-version
+/plist/run
+/plist/info.hotoku.gcal_forcerun.plist

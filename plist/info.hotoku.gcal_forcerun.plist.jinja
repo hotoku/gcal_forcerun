@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>{{PLIST_NAME}}</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>{{CURDIR}}/run</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardErrorPath</key>
+    <string>{{CURDIR}}/log/stderr</string>
+    <key>StandardOutPath</key>
+    <string>{{CURDIR}}/log/stdout</string>
+    <key>WorkingDirectory</key>
+    <string>{{CURDIR}}/..</string>
+
+
+    <key>StartCalendarInterval</key>
+    <array>
+      {% for m in [13, 14, 28, 29, 43, 44, 58, 59] %}
+      <dict>
+        <key>Minute</key>
+        <integer>{{m}}</integer>
+      </dict>
+      {% endfor %}
+    </array>
+  </dict>
+</plist>

@@ -1,0 +1,5 @@
+.envrc
+info.hotoku.gce.copy-history.plist
+log/
+history/
+run
