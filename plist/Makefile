@@ -44,5 +44,5 @@ $(PLIST_NAME).plist: $(PLIST_NAME).plist.jinja
 $(EXE_NAME): $(EXE_NAME).jinja
 	@echo making $@
 	jinja2 \
-		-D PYTHON=$(shell which python) \
+		-D PYTHON=$(shell poetry run which python) \
 		$< > $@
